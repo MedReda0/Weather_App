@@ -1,0 +1,351 @@
+
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+@import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-straight/css/uicons-solid-straight.css');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #eee;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+input:focus{
+  outline: none;
+}
+body{
+  position: relative;
+  padding: 20px;
+  height: 100dvh;
+  background: url(../assets/background.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+body::before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 200%;
+  backdrop-filter: blur(15px);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.20), rgba(255, 255, 255, 0.20));
+  height: 470px;
+  width: 300px;
+  border-radius: 15px;
+  padding: 20px 15px;
+  gap: 25px;
+  overflow: hidden;
+}
+
+@media (max-height: 420px){
+  .container{
+    width: 500px;
+    height: auto;
+  }
+}
+
+.container .search{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  width: 100%;
+  gap: 10px;
+  transition: .3s;
+}
+
+@media (max-height: 530px){
+  .container .search{
+    padding: 7px 15px;
+  }
+}
+
+.container .search input{
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  transition: .2s;
+}
+
+.container .search input::placeholder{
+  color: #eee;
+  transition: .3s;
+}
+
+@media (max-height: 530px){
+  .container .search input{
+    font-size: 12px;
+  }
+}
+
+.container .search input:focus::placeholder{
+  color: transparent;
+}
+
+.container .search i{
+  cursor: pointer;
+  translate: 0 2.5px;
+}
+
+@media (max-height: 530px){
+  .container .search i{
+    font-size: 14px;
+    translate: 0 2.3px;
+  }
+}
+
+.container .message{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 15%;
+}
+
+@media (max-height: 530px){
+  .container .message{
+    margin-top: 0;
+  }
+}
+
+.container .message img{
+  width: 200px;
+  margin-bottom: 8px;
+}
+
+.container .not-found_message.message img{
+  width: 100%;
+}
+
+@media (max-height: 530px){
+  .container .message img{
+    width: 140px;
+  }
+  .container .not-found_message.message img{
+    width: 200px;
+  }
+}
+
+.container .message p{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (max-height: 530px){
+  .container .message p{
+    font-size: 18px;
+  }
+}
+
+.container .message span{
+  font-size: 13px;
+  font-weight: 400;
+}
+
+@media (max-height: 530px){
+  .container .message span{
+    font-size: 12px;
+  }
+}
+
+.container .weather,
+.container .weather .condition{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-height: 420px){
+  .container .weather{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.container .weather .condition .location_date,
+.container .weather .condition .statue,
+.container .weather .condition .more_info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.container .weather .condition .location_date .location,
+.container .weather .condition .location_date .date{
+  display: flex;
+  align-items: center;
+}
+
+.container .weather .condition .location_date .location{
+  gap: 7px;
+}
+
+.container .weather .condition .location_date .location i{
+  font-size: 20px;
+  translate: 0 2.5px;
+}
+
+.container .weather .condition .location_date .location .city{
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.container .weather .condition .location_date .date{
+  font-size: 13.5px;
+  translate: 0 .9px;
+}
+
+.container .weather .condition .location_date .date h4{
+  font-weight: 600;
+}
+
+.container .weather .condition .statue img{
+  width: 100px;
+}
+
+.container .weather .condition .statue .temperature h1{
+  font-weight: 600;
+  height: 45px;
+}
+
+.container .weather .condition .statue .temperature .weather .condition_name{
+  text-align: end;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.container .weather .condition .more_info{
+  padding: 0 10px;
+}
+
+@media (max-height: 420px){
+  .container .weather .condition .more_info{
+    padding: 0;
+  }
+}
+
+.container .weather .condition .more_info .humidity,
+.container .weather .condition .more_info .wind_speed{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.container .weather .condition .more_info i{
+  font-size: 25px;
+  translate: 0 6px;
+}
+
+.container .weather .condition .more_info .title{
+  font-size: 13px;
+  color: #ccc;
+}
+
+.container .weather .condition .more_info .value{
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.container .weather .forecast{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+}
+
+@media (max-height: 420px){
+  .container .weather .forecast{
+    display: grid;
+    grid-template-columns: repeat(2,90px);
+    width: 75%;
+  }
+}
+
+.container .weather .forecast::-webkit-scrollbar{
+  display: none;
+}
+
+.container .weather .forecast li{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.09);
+  padding: 10px;
+  border-radius: 10px;
+  text-wrap: nowrap;
+  transition: .3s;
+  position: relative;
+  width: 130px;
+  height: 100px;
+}
+
+@media (max-height: 420px){
+  .container .weather .forecast li{
+    width: auto;
+    height: 110px;
+  }
+}
+
+.container .weather .forecast li:hover{
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.container .weather .forecast li .date{
+  font-size: 14px;
+  width: 50px;
+}
+
+@media (max-height: 420px){
+  .container .weather .forecast .date{
+    translate: 10px;
+  }
+}
+
+.container .weather .forecast li img{
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.container .weather .forecast li .temperature{
+  font-size: 13px;
+  font-weight: 600;
+}

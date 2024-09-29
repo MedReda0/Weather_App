@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+  <title>Weather App</title>
+</head>
+<body>
+  <div class="container">
+    <div class="search">
+      <input type="text" id="search-input" placeholder="Search City">
+      <i class="fi fi-br-search"></i>
+    </div>
+    <div class="search_message message">
+      <img rel="preload" src="assets/message/search-city.png">
+      <p>Search City</p>
+      <span>Find out the weather conditions of the city</span>
+    </div>
+    <div class="weather" style="display: none;">
+      <div class="condition">
+        <div class="location_date">
+          <div class="location">
+            <i class="fi fi-rs-marker"></i>
+            <span class="city">city</span> 
+          </div>
+          <div class="date">
+            <h4 class="day">day</h4>
+            <span class="month">, date</span>
+          </div>
+        </div>
+        <div class="statue">
+          <img rel="preload" src="">
+          <div class="temperature">
+            <h1 class="temperature_degree">°C</h1>
+            <div class="weather_name">statue</div>
+          </div>
+        </div>
+        <div class="more_info">
+          <div class="humidity">
+            <i class="fi fi-rs-raindrops"></i>
+            <div class="info">
+              <div class="title">Humidity</div>
+              <div class="value">%</div>
+            </div>
+          </div>
+          <div class="wind_speed">
+            <i class="fi fi-rs-wind"></i>
+            <div class="info">
+              <div class="title">Wind Speed</div>
+              <div class="value">M/s</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="forecast">
+        <li>
+          <div class="date"></div>
+          <img rel="preload" src="">
+          <div class="temperature">°C</div>
+        </li>
+        <li>
+          <div class="date"></div>
+          <img rel="preload" src="">
+          <div class="temperature">°C</div>
+        </li>
+        <li>
+          <div class="date"></div>
+          <img rel="preload" src="">
+          <div class="temperature">°C</div>
+        </li>
+        <li>
+          <div class="date"></div>
+          <img rel="preload" src="">
+          <div class="temperature">°C</div>
+        </li>
+      </ul>
+    </div>
+    <div class="not-found_message message" style="display: none;">
+      <img rel="preload" src="assets/message/not-found.png">
+      <p>Not Found</p>
+      <span>Find out the weather conditions of the city</span>
+    </div>
+  </div>
+  <script src="JS/script.js"></script>
+</body>
+</html>
