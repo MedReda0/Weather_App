@@ -33,6 +33,8 @@ body{
   padding: 20px;
   height: 100dvh;
   background: url(../assets/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
